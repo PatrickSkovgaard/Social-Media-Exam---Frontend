@@ -1,0 +1,31 @@
+/* Kommentar om animationen for baggrunden nedenunder */
+/*  Denne animationskode er meget inspireret og delvist taget fra:
+    https://dev.to/babib/amazing-pure-html-and-css-background-animations-4dim
+ */
+html, body {
+    width: 100% content-box;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(-45deg, #00303f, #262f4f, #2f2f5f);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+    /*
+Alt ovenover er som beskrevet, primært taget fra
+https://dev.to/babib/amazing-pure-html-and-css-background-animations-4dim
+og resten er mig selv der har stylet til
+ */
+}
