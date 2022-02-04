@@ -1,6 +1,10 @@
 /* Kommentar om animationen for baggrunden nedenunder */
 /*  Denne animationskode er meget inspireret og delvist taget fra:
     https://dev.to/babib/amazing-pure-html-and-css-background-animations-4dim
+
+    Derudover har jeg brugt keyframes til animationer på knapper, som jeg har lært
+    igennem internettet, via youtube og w3schools, bl.a. via:
+    https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp
  */
 html, body {
     width: 100% content-box;
@@ -11,6 +15,19 @@ body {
     background: linear-gradient(-45deg, #00303f, #262f4f, #2f2f5f);
     background-size: 400% 400%;
     animation: gradient 8s ease infinite;
+}
+
+h1, h3{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    color: snow;
+}
+
+h3{
+    color: thistle;
 }
 
 @keyframes gradient {
@@ -24,8 +41,220 @@ body {
         background-position: 0 50%;
     }
     /*
-Alt ovenover er som beskrevet, primært taget fra
+Alt ovenover er som beskrevet, primÃƒÂ¦rt taget fra
 https://dev.to/babib/amazing-pure-html-and-css-background-animations-4dim
 og resten er mig selv der har stylet til
  */
+}
+
+#posts{
+    color:snow;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    transform: translateY(-40px);
+}
+
+.post_divs{
+    display:flex;
+    justify-content:center;
+    flex-direction: row;
+    margin-top: 1.5%;
+    max-width: 100%;
+    align-items:center;
+    border: solid black 1px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: black;
+}
+
+#emoji_doc{
+    margin-top: 50px;
+    margin-bottom:-10px;
+    transform: scale(1.5, 1.5);
+    border: solid black 1px;
+    border-radius: 15px;
+    padding: 3px;
+    animation: doc_bg 7s ease infinite;
+    background-size: 400% 400%;
+    background: linear-gradient(-45deg, limegreen, blue, lemonchiffon, rebeccapurple, red);
+}
+
+@keyframes doc_bg{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 150% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+#emoji_title{
+    margin: 0;
+    margin-right: 5px;
+}
+
+#emoji_content{
+    display: flex;
+    margin: 0;
+    margin-right: 5px;
+    margin-left: 25px;
+}
+
+#emoji_date{
+    display: flex;
+    margin: 0;
+    margin-right: 5px;
+    margin-left: 25px;
+}
+
+#emoji_hash{
+    display: flex;
+    margin: 0;
+    margin-right: 5px;
+    margin-left: 25px;
+}
+
+label{
+    color: snow;
+}
+
+#post_h2{
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 45px;
+}
+
+#post_area{
+    margin-top: 5%;
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    border: solid black 1px;
+    border-radius: 10px 20px 30px 40px;
+    margin-left: 30px;
+    background-color: #000000;
+    color: snow;
+    font-family: "Century Schoolbook Gothic";
+    font-size: 17px;
+}
+
+#cud_buttons{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+#search_area{
+    margin-top: 5%;
+}
+
+#search_hash_posts{
+    display: flex;
+    justify-content: center;
+}
+
+#posts_from_hashtag{
+    margin-left: 10px;
+    border: solid white 1px;
+    border-radius: 10px;
+    color:darkblue;
+}
+
+#search_btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 55px;
+}
+
+#hashtag_btn:hover{
+    font-size: 18px;
+    animation: both;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: searchB;
+    animation-duration: 1000ms;
+}
+
+
+
+#create_button:hover{
+    font-size: 18px;
+    animation: both;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: createB;
+    animation-duration: 1000ms;
+}
+
+#update_button:hover{
+    font-size: 18px;
+    animation: both;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: updateB;
+    animation-duration: 1000ms;
+}
+
+#delete_button:hover{
+    font-size: 18px;
+    animation: both;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: deleteB;
+    animation-duration: 1000ms;
+}
+
+
+@keyframes createB{
+    from {
+        background-color: black;
+        color: snow;
+    }
+    to {
+        background-color: black;
+        color: limegreen;
+    }
+}
+
+@keyframes updateB{
+    from {
+        background-color: black;
+        color: snow;
+    }
+    to {
+        background-color: black;
+        color: blue;
+    }
+}
+
+@keyframes deleteB{
+    from {
+        background-color: black;
+        color: snow;
+    }
+    to {
+        background-color: black;
+        color: red;
+    }
+}
+
+@keyframes searchB{
+    from {
+        background-color: black;
+        color: snow;
+    }
+    to {
+        background-color: black;
+        color:rebeccapurple;
+    }
 }

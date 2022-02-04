@@ -8,22 +8,39 @@
 </head>
 <body>
 
-    <h2 id="h2_index">Velkommen til ***</h2>
+    <div id="front_page">
 
-    <nav id="navbar_index">
-        <div id="nav_div">
-            <button id="login_btn">Log på</button>
-            <button id="create_acc_btn">Opret konto</button>
+        <h1 id="h1_index">Velkommen til {REDACTED}</h1>
+        <h3 id="h3_index">Del hvad du har på hjerte, med masser af andre mennesker!</h3>
+
+
+        <div id="cud_buttons">
+            <button type="button" id="create_button" onclick="displayCreatePost()">Lav en post</button>
+            <button type="button" id="update_button">Redigér en post</button>
+            <button type="button" id="delete_button">Slet en post</button>
         </div>
-    </nav>
 
 
-    <div id="view_posts_div">
-        <button id="posts_btn">Se alle opslag</button>
+        <div id="search_area">
+            <div id="search_hash_posts">
+                <label for="posts_from_hashtag">Søg efter posts, ud fra et hashtag:</label>
+                <input type="text" id="posts_from_hashtag" name="hashtag_posts" placeholder="#SkrivHashtag">
+            </div>
+
+            <div id="search_btn">
+                <button type="submit" id="hashtag_btn">Søg</button>
+            </div>
+        </div>
+
+        <div id="post_area">
+            <h2 id="post_h2">Opslag</h2>
+            <div id="posts"></div>
+        </div>
+
     </div>
 
 
-
+    <div id="create_page"></div>
 
 </body>
 </html>
